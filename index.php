@@ -4259,7 +4259,7 @@
 
 	<!-- Copyright -->
 
-<?include_once('inc/cory.php')?>
+<?include_once('inc/copy.php')?>
 </div>
 
 <script src="js/jquery-3.3.1.min.js"></script>

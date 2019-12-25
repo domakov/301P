@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+      	<!DOCTYPE html>
 <html lang="en">
 <?include_once('inc/head.php')?>
 <link rel="stylesheet" type="text/css" href="styles/shop_styles.css">
@@ -32,7 +32,7 @@
 
 							<!-- Categories Menu -->
 
-							<?include_once('inc/category_1.php')?>
+							<?include_once('inc/category.php')?>
 
 							<!-- Main Nav Menu -->
 
@@ -201,10 +201,12 @@
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_2.png" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/<?if($product['img_link']){echo 
+									$product['img_link'];}
+									else{echo 'featured_1.png';}?>" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$<?=$product['product_price']?></div>
-									<div class="product_name"><div><a href="#" tabindex="0">
+									<div class="product_name"><div><a href="http://p301/product.php" tabindex="0">
 										<?=$product['product_name']?></a></div></div>
 								</div>
 								<div class="product_fav"><i class="fas fa-heart"></i></div>

@@ -1,4 +1,13 @@
 <?
+function getOneProduct(){
+	$sql="SELECT * FROM product
+	LEFT JOIN images
+		ON product.product_id=images.product_id
+	 WHERE product_category_id=$category_id";
+	
+	return query($sql);
+}
+
 
 function get_all_category(){
 
@@ -8,15 +17,22 @@ function get_all_category(){
 }
 
 
+
+
 function getOneCategoryProduct($category_id){
 
-	$sql="SELECT * FROM product WHERE product_category_id=$category_id";
+	$sql="SELECT * FROM product
+	LEFT JOIN images
+		ON product.product_id=images.product_id
+	 WHERE product_category_id=$category_id";
 	
 	return query($sql);
 }
 
 function getAllProduct(){
-	$sql="SELECT * FROM product";
+	$sql="SELECT * FROM product
+		LEFT JOIN images
+		ON product.product_id=images.product_id";
 	
 	return query($sql);
 
