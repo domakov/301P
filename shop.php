@@ -206,7 +206,8 @@
 									else{echo 'featured_1.png';}?>" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$<?=$product['product_price']?></div>
-									<div class="product_name"><div><a href="http://p301/product.php" tabindex="0">
+									<div class="product_name"><div>
+										<a href="http://p301/product.php?product_id=<?=$product['product_id']?>" tabindex="0">
 										<?=$product['product_name']?></a></div></div>
 								</div>
 								<div class="product_fav"><i class="fas fa-heart"></i></div>

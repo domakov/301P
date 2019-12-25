@@ -63,7 +63,13 @@
 	<div class="single_product">
 		<div class="container">
 			<div class="row">
-
+<?
+$products=getOneProduct($_GET['product_id']);
+foreach ($$products as $pr) {
+	$product=$pr;
+}
+var_dump($product);
+?>
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
